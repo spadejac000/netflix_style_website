@@ -1,0 +1,28 @@
+.sign-in-form {
+  width: 30%;
+  margin: 0 auto;
+  margin-top: 5rem;
+  padding: 5rem;
+  border: 1px solid #999;
+}
+
+/* Button styles */
+
+.btn-primary {
+  color: #fff;
+  background-color: var(--primary-color)!important;
+  border-color: var(--primary-color)!important;
+}
+.btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active, .open>.dropdown-toggle.btn-primary {
+  color: #fff;
+  background-color: var(--primary-color-darker)!important;
+  border-color: var(--primary-color-darker)!important;
+}
+
+.remember {
+  margin-top: 1rem;
+}
+
+.form-title {
+  margin-bottom: 2rem;
+}
