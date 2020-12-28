@@ -9,7 +9,6 @@ import {Link} from 'react-router-dom';
 const Video = (props) => {
 
   const {
-    buttonLabel,
     className
   } = props;
 
