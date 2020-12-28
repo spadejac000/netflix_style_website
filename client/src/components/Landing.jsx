@@ -1,9 +1,9 @@
 import React, {useState} from 'react';
-import { TabContent, TabPane, Nav, NavItem, NavLink, Button } from 'reactstrap';
+import { TabContent, TabPane, Nav, NavItem, NavLink} from 'reactstrap';
 import classnames from 'classnames';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faChevronRight, faBan, faTablet, faTags } from '@fortawesome/free-solid-svg-icons';
-import { BrowserRouter as Router, Switch, Route, Link
+import { faChevronRight} from '@fortawesome/free-solid-svg-icons';
+import { BrowserRouter as Router, Link
 } from "react-router-dom";
 
 const Landing = () => {
@@ -25,7 +25,7 @@ const Landing = () => {
         <div className="showcase-content">
           <h1>See what's next</h1>
           <p>Watch anywhere. Cancel anytime</p>
-          <a href="" className="btn btn-xl">
+          <a href="/" className="btn btn-xl">
             Watch Free For 30 Days <FontAwesomeIcon className="btn-icon" size="lg" icon={faChevronRight}/>
           </a>
         </div>
@@ -65,7 +65,7 @@ const Landing = () => {
               <p className="text-lg">
                 If you decide Netflix isn't for you - no problem. No commitment. Cancel online anytime.
               </p>
-              <a href="" className="btn btn-lg">Watch Free For 30 Days</a>
+              <a href="/" className="btn btn-lg">Watch Free For 30 Days</a>
             </div>
             <img src="https://i.ibb.co/J2xDJV7/tab-content-1.png" alt=""/>
           </div>
@@ -76,7 +76,7 @@ const Landing = () => {
             <p className="text-lg">
               Watch TV shows and movies anytime, anywhere - personalized for you.
             </p>
-            <a href="" className="btn btn-lg">Watch Free For 30 Days</a>
+            <a href="/" className="btn btn-lg">Watch Free For 30 Days</a>
           </div>
           <div className="tab-2-content-bottom">
             <div>
@@ -102,7 +102,7 @@ const Landing = () => {
         <TabPane tabId="3">
           <div className="text-center">
             <p className="text-lg">Choose one plan and watch everything on Netflix</p>
-            <a href="" className="btn btn-lg">Watch Free For 30 Days</a>
+            <a href="/" className="btn btn-lg">Watch Free For 30 Days</a>
           </div>
           <table className="table">
             <thead>
@@ -175,29 +175,29 @@ const Landing = () => {
         <p>Questions? Call 1-866-579-7172</p>
         <div className="footer-cols">
           <ul>
-            <li><a href="#">FAQ</a></li>
-            <li><a href="#">Investor Relations</a></li>
-            <li><a href="#">Ways To Watch</a></li>
-            <li><a href="#">Corporate Information</a></li>
-            <li><a href="#">Netflix Originals</a></li>
+            <li><a href="/">FAQ</a></li>
+            <li><a href="/">Investor Relations</a></li>
+            <li><a href="/">Ways To Watch</a></li>
+            <li><a href="/">Corporate Information</a></li>
+            <li><a href="/">Netflix Originals</a></li>
           </ul>
           <ul>
-            <li><a href="#">Help Center</a></li>
-            <li><a href="#">Jobs</a></li>
-            <li><a href="#">Terms Of Use</a></li>
-            <li><a href="#">Contact Us</a></li>
+            <li><a href="/">Help Center</a></li>
+            <li><a href="/">Jobs</a></li>
+            <li><a href="/">Terms Of Use</a></li>
+            <li><a href="/">Contact Us</a></li>
           </ul>
           <ul>
-            <li><a href="#">Account</a></li>
-            <li><a href="#">Redeem Gift Cards</a></li>
-            <li><a href="#">Privacy</a></li>
-            <li><a href="#">Speed Test</a></li>
+            <li><a href="/">Account</a></li>
+            <li><a href="/">Redeem Gift Cards</a></li>
+            <li><a href="/">Privacy</a></li>
+            <li><a href="/">Speed Test</a></li>
           </ul>
           <ul>
-            <li><a href="#">Media Center</a></li>
-            <li><a href="#">Buy Gift Cards</a></li>
-            <li><a href="#">Cookie Preferences</a></li>
-            <li><a href="#">Legal Notices</a></li>
+            <li><a href="/">Media Center</a></li>
+            <li><a href="/">Buy Gift Cards</a></li>
+            <li><a href="/">Cookie Preferences</a></li>
+            <li><a href="/">Legal Notices</a></li>
           </ul>
         </div>
       </footer>

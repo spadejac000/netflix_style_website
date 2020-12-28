@@ -1,9 +1,28 @@
-import React from 'react';
+import React, {useContext} from 'react';
+import {Row, Col} from 'reactstrap';
+import {VideoContext} from '../VideoContext';
+import './css/videolist.css'
+import thumbnails from '../thumbnails/windmills.png';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faPlayCircle} from '@fortawesome/free-solid-svg-icons';
+import {Link} from 'react-router-dom'
+import Video from './Video';
 
 const VideoList = () => {
+  
+  const [videos] = useContext(VideoContext);
+
   return (
-    <div>
-      <h1>Poop</h1>
+    <div className="contain">
+      <Row>
+        {videos.map(video => (
+          <Video video={video}/>
+        ))}
+      </Row>
+      <div>
+        
+      </div>
+      
     </div>
   )
 }
