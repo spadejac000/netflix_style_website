@@ -1,19 +1,10 @@
-import React, {useState} from 'react';
-import { TabContent, TabPane, Nav, NavItem, NavLink} from 'reactstrap';
-import classnames from 'classnames';
+import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBan, faTablet, faGraduationCap} from '@fortawesome/free-solid-svg-icons';
-import { BrowserRouter as Router, Link
-} from "react-router-dom";
+import {Link} from "react-router-dom";
 import thumbnails from '../thumbnails/grad-cap.png';
 
 const Landing = () => {
-
-  const [activeTab, setActiveTab] = useState('1');
-
-  const toggle = tab => {
-    if(activeTab !== tab) setActiveTab(tab);
-  }
   
   return (
     <div>
@@ -29,29 +20,29 @@ const Landing = () => {
         </div>
       </header>
 
-      <section class="tabs">
-        <div class="container">
-          <div id="tab-1" class="tab-item tab-border">
+      <section className="tabs">
+        <div className="container">
+          <div id="tab-1" className="tab-item tab-border">
             <FontAwesomeIcon className="fa-3x" icon={faBan}/>
-            <p class="hide-sm">Cancel anytime</p>
+            <p className="hide-sm">Cancel anytime</p>
           </div>
-          <div id="tab-2" class="tab-item">
+          <div id="tab-2" className="tab-item">
             <FontAwesomeIcon className="fa-3x" icon={faTablet}/>
-            <p class="hide-sm">Watch anywhere</p>
+            <p className="hide-sm">Watch anywhere</p>
           </div>
-          <div id="tab-3" class="tab-item">
+          <div id="tab-3" className="tab-item">
             <FontAwesomeIcon className="fa-3x" icon={faGraduationCap}/>
-            <p class="hide-sm">Learn Everything</p>
+            <p className="hide-sm">Learn Everything</p>
           </div>
         </div>
       </section>
 
-      <section class="tab-content">
-        <div class="container">
-          <div id="tab-1-content" class="tab-content-item show">
-            <div class="tab-1-content-inner">
+      <section className="tab-content">
+        <div className="container">
+          <div id="tab-1-content" className="tab-content-item show">
+            <div className="tab-1-content-inner">
               <div>
-                <p class="text-lg">
+                <p className="text-lg">
                   Watch all our courses to help you learn what you need to earn your certifiaction
                 </p>
                 <Link to="/sign-in" className="btn btn-primary btn-lg">Sign in to watch courses</Link>

@@ -8,16 +8,12 @@ import {Link} from 'react-router-dom';
 
 const Video = (props) => {
 
-  const {
-    className
-  } = props;
-
   const [modal, setModal] = useState(false);
 
   const toggle = () => setModal(!modal);
 
   return (
-    <Col className="" key={props.video.id} className="col-12 col-md-3">
+    <Col key={props.video.id} className="col-12 col-md-3 grid-column">
       <div className="thumbnail-box" onClick={toggle}>
         <img className="video-thumbnail" src={thumbnails} alt="the video cover"/>
         <div className="thumbnail-overlay">
@@ -27,7 +23,7 @@ const Video = (props) => {
           </div>
         </div>
       </div>
-      <Modal isOpen={modal} toggle={toggle} className={className}>
+      <Modal isOpen={modal} toggle={toggle}>
         <ModalHeader toggle={toggle}>{props.video.title}</ModalHeader>
         <ModalBody>
           {props.video.synopsis}

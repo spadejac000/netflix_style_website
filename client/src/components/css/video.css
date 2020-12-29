@@ -63,3 +63,7 @@
   text-align: center;
   opacity: 1;
 }
+
+.grid-column {
+  margin-bottom: 5rem;
+}

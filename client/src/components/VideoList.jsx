@@ -1,24 +1,24 @@
 import React, {useContext} from 'react';
-import {Row, Col} from 'reactstrap';
+import {Row} from 'reactstrap';
 import {VideoContext} from '../VideoContext';
-import './css/videolist.css'
-import thumbnails from '../thumbnails/windmills.png';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faPlayCircle} from '@fortawesome/free-solid-svg-icons';
-import {Link} from 'react-router-dom';
+import './css/videolist.css';
 import Video from './Video';
+import Navbar from './NavBar';
 
 const VideoList = () => {
   
   const [videos] = useContext(VideoContext);
 
   return (
-    <div className="contain">
-      <Row>
-        {videos.map(video => (
-          <Video video={video}/>
-        ))}
-      </Row>
+    <div>
+      <Navbar/>
+      <div className="contain">
+        <Row>
+          {videos.map(video => (
+            <Video video={video} key={video.id}/>
+          ))}
+        </Row>
+      </div>
     </div>
   )
 }

@@ -31,7 +31,6 @@
 
 .thumbnail-box:hover img {
   z-index: 3;
-  /* position: relative; */
 }
 
 .thumbnail-overlay {
