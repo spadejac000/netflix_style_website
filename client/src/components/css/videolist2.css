@@ -1,3 +1,5 @@
+
+
 .contain {
   width: 90%;
   margin: 0 auto;
@@ -63,6 +65,46 @@
 }
 
 .contain {
-	width: 90%;
+	width: 80%;
 	margin: 0 auto;
+}
+
+/* carousel styles */
+
+.main {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+
+.section {
+  margin: 10px auto;
+  display: flex;
+  justify-content: left;
+  overflow-x: auto;
+}
+
+.section::-webkit-scrollbar {
+  visibility: hidden;
+}
+
+.data-item {
+  min-width: 20%;
+  transition: 0.5s;
+  margin: 1rem;
+  position: relative;
+}
+
+.arrows {
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -50%);
+  cursor: pointer;
+  left: 2%;
+  z-index: 1;
+}
+
+.right-arrow {
+  left: 95%;
+  text-align: right;
 }

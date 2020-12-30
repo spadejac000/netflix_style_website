@@ -13,7 +13,7 @@ const Video = (props) => {
   const toggle = () => setModal(!modal);
 
   return (
-    <Col key={props.video.id} className="col-12 col-md-3 grid-column">
+    <div key={props.video.id} className="grid-column data-item">
       <div className="thumbnail-box" onClick={toggle}>
         <img className="video-thumbnail" src={thumbnails} alt="the video cover"/>
         <div className="thumbnail-overlay">
@@ -33,7 +33,7 @@ const Video = (props) => {
           <Button color="secondary" onClick={toggle}>Cancel</Button>
         </ModalFooter>
       </Modal>
-    </Col>
+    </div>
   )
 }
 

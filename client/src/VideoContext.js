@@ -80,7 +80,7 @@ export const VideoProvider = (props) => {
         synopsis: 'Scientists and engineers are using energy from the wind to generate electricity. Wind energy, or wind power, is created using a wind turbine.'
       },
       {
-        title: "Windmills",
+        title: "Sonics",
         thumbnail: "/Users/jacobspade/code/netflix_style_website/client/src/thumbnails/windmills.png",
         id: uuid(),
         synopsis: 'Scientists and engineers are using energy from the wind to generate electricity. Wind energy, or wind power, is created using a wind turbine.'

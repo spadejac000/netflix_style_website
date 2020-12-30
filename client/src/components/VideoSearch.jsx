@@ -1,18 +1,12 @@
-import React, {useContext, useEffect} from 'react';
+import React, {useContext} from 'react';
 import {Row} from 'reactstrap';
-import {VideoContext} from '../VideoContext';
 import {SearchContext} from '../SearchContext';
 import './css/videolist.css';
-import Video from './Video';
 import NavBar from './NavBar';
+import Video from './Video';
 
 const VideoSearch = () => {
-  
-  const [videos] = useContext(VideoContext);
   const [search] = useContext(SearchContext);
-
-  console.log('search content: ', search)
-  
 
   return (
     <div>
@@ -20,12 +14,11 @@ const VideoSearch = () => {
       <div className="contain">
         <Row>
           {search.map(video => (
-            <h1>{video.title}</h1>
+            <Video video={video} key={video.id}/>
           ))}
         </Row>
       </div>
     </div>
-    
   )
 }
 

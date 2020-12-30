@@ -3,16 +3,15 @@ import { Collapse, Navbar, NavbarToggler,
   NavbarBrand, Nav, NavItem, NavLink, NavbarText, InputGroup, InputGroupAddon, Button, Input
 } from 'reactstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faSearch} from '@fortawesome/free-solid-svg-icons';
+import { faSearch, faCog} from '@fortawesome/free-solid-svg-icons';
 import {VideoContext} from '../VideoContext';
 import {SearchContext} from '../SearchContext';
-import {Redirect} from 'react-router-dom';
 import { useHistory } from "react-router-dom";
 
 const NavBar = (props) => {
   let history = useHistory();
   const [isOpen, setIsOpen] = useState(false);
-  const [videos, setVideos] = useContext(VideoContext);
+  const [videos] = useContext(VideoContext);
   const [search, setSearch] = useContext(SearchContext);
   const [searchInput, setSearchInput] = useState('');
 
@@ -22,9 +21,7 @@ const NavBar = (props) => {
 
   const handleSearch = (e) => {
     e.preventDefault()
-    // {<Redirect to="/video-search" />}
     history.push("/video-search")
-    // window.location.href = '/video-search';
     setSearch(videos.filter(
       (video) => {
         return video.title.toLowerCase().indexOf(searchInput.toLowerCase()) !== -1;
@@ -42,10 +39,7 @@ const NavBar = (props) => {
         <Collapse isOpen={isOpen} navbar>
           <Nav className="mr-auto" navbar>
             <NavItem>
-              <NavLink href="/components/">Home</NavLink>
-            </NavItem>
-            <NavItem>
-              <NavLink href="https://github.com/reactstrap/reactstrap">Courses</NavLink>
+              <NavLink href="/video-list">Home</NavLink>
             </NavItem>
           </Nav>
           <form onSubmit={handleSearch}>
@@ -60,7 +54,11 @@ const NavBar = (props) => {
               </InputGroupAddon>
             </InputGroup>
           </form>
-          <NavbarText>Simple Text</NavbarText>
+          <Nav navbar>
+            <NavItem>
+              <NavLink href="/settings"><FontAwesomeIcon className="fa-2x" icon={faCog}/></NavLink>
+            </NavItem>
+          </Nav>
         </Collapse>
       </Navbar>
     </div>
