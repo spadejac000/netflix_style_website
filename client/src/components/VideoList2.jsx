@@ -1,5 +1,5 @@
-import React, {useContext} from 'react';
-import {Row} from 'reactstrap';
+import React, {useContext, useRef, useState} from 'react';
+import {Collapse, CardBody, Card } from 'reactstrap';
 import {VideoContext} from '../VideoContext';
 import './css/videolist2.css';
 import Navbar from './NavBar';
@@ -7,36 +7,39 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowCircleLeft, faArrowCircleRight, faPlayCircle} from '@fortawesome/free-solid-svg-icons';
 import thumbnails from '../thumbnails/windmills.png';
 import {Link} from 'react-router-dom';
+import Video2 from './Video2';
 
 const VideoList2 = () => {
   
   const [videos] = useContext(VideoContext);
+  const [isOpen, setIsOpen] = useState(false);
+  const toggle = () => setIsOpen(!isOpen);
 
   let l = 0;
-  const handleLeftArrow = () => {
-    console.log('hello left')
+  const handleRightArrow = () => {
+    console.log('hello right')
     l++;
     for(let i of document.querySelectorAll('.data-item')) {
       if(l == 0) {i.style.left = "0px";}
-      if(l == 1) {i.style.left = "-740px";}
-      if(l == 2) {i.style.left = "-1480px";}
-      if(l == 3) {i.style.left = "-2220px";}
-      if(l == 4) {i.style.left = "-2960px";}
-      if(l > 4) {i.style.left = "0px";}
-      console.log('poo1')
+      if(l == 1) {i.style.left = "-60%";}
+      if(l == 2) {i.style.left = "-120%";}
+      if(l == 3) {i.style.left = "-180%";}
+      if(l == 4) {i.style.left = "-240%";}
+    }
+    if(l > 4) {
+      l--;
     }
   }
 
-  const handleRightArrow = () => {
-    console.log('hello right')
+  const handleLeftArrow = () => {
+    console.log('hello left')
     l--;
     for(let i of document.querySelectorAll('.data-item')) {
       if(l == 0) {i.style.left = "0px";}
-      if(l == 1) {i.style.left = "-740px";}
-      if(l == 2) {i.style.left = "-1480px";}
-      if(l == 3) {i.style.left = "-2220px";}
+      if(l == 1) {i.style.left = "-60%";}
+      if(l == 2) {i.style.left = "-120%";}
+      if(l == 3) {i.style.left = "-180%";}
       if(l < 0) {l = 0;}
-      console.log('poo2')
     }
   }
 
@@ -44,19 +47,21 @@ const VideoList2 = () => {
     <div className="main">
       <Navbar/>
       <div className="contain">
+        <h2>Popular Courses</h2>
         <div className="section">
           <FontAwesomeIcon className="fa-3x left-arrow arrows" icon={faArrowCircleLeft} onClick={handleLeftArrow}/>
           <FontAwesomeIcon className="fa-3x right-arrow arrows" icon={faArrowCircleRight} onClick={handleRightArrow}/>
           {videos.map(video => (
-            <div className="thumbnail-box data-item">
-              <img className="video-thumbnail" src={thumbnails} alt="the video cover"/>
-              <div className="thumbnail-overlay">
-                <div className="overlay-contents-left">
-                  <Link to="/video-play"><FontAwesomeIcon className="play-btn-icon fa-3x" icon={faPlayCircle}/></Link>
-                  <h3>{video.title}</h3>
-                </div>
-              </div>
-            </div>
+            <Video2 video={video} key={video.id}/>
+            // <div className="thumbnail-box data-item"  onClick={toggle}>
+            //   <img className="video-thumbnail" src={thumbnails} alt="the video cover"/>
+            //   <div className="thumbnail-overlay">
+            //     <div className="overlay-contents-left">
+            //       <Link to="/video-play"><FontAwesomeIcon className="play-btn-icon fa-3x" icon={faPlayCircle}/></Link>
+            //       <h3>{video.title}</h3>
+            //     </div>
+            //   </div>
+            // </div>
           ))}
         </div>
       </div>

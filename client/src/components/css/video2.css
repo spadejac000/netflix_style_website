@@ -1,10 +1,72 @@
-
-
-.contain {
-  width: 90%;
-  margin: 0 auto;
+#root > div > div > div {
+  padding: 2px;
+  margin-bottom: 5rem;
 }
 
+.video-thumbnail {
+  transition: .5s;
+  width: 100%;
+}
+
+.thumbnail-box {
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.thumbnail-box:hover {
+  transform: scale(1.3);
+}
+
+.thumbnail-box:hover .thumbnail-overlay{
+  z-index: 3;
+  background-color: rgba(0,0,0,0.3);
+}
+
+.thumbnail-box:hover img {
+  z-index: 3;
+  position: relative;
+}
+
+.thumbnail-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  transition: .5s;
+  background-color: rgba(0,0,0,0);
+  border: 0px;
+}
+
+.overlay-contents-left {
+  padding: 1rem;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  opacity: 0;
+}
+
+.overlay-contents-bottom {
+  opacity: 0;
+}
+
+.thumbnail-box:hover .overlay-contents-left {
+  opacity: 1;
+  z-index: 12;
+}
+
+.thumbnail-box:hover .overlay-contents-bottom {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  text-align: center;
+  opacity: 1;
+}
+
+.grid-column {
+  margin-bottom: 2rem;
+}
 
 #root > div > div > div {
   padding: 2px;
@@ -66,7 +128,7 @@
 
 .contain {
 	width: 80%;
-  margin: 0 auto;
+	margin: 0 auto;
 }
 
 /* carousel styles */
@@ -78,7 +140,7 @@
 }
 
 .section {
-  margin: 10px auto;
+  margin: auto;
   display: flex;
   justify-content: left;
   overflow-x: auto;
@@ -86,6 +148,13 @@
 
 .section::-webkit-scrollbar {
   visibility: hidden;
+}
+
+.data-item {
+  min-width: 25%;
+  transition: 0.5s;
+  margin: 1rem;
+  position: relative;
 }
 
 .arrows {

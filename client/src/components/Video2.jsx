@@ -3,7 +3,7 @@ import {Col, Button, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstr
 import thumbnails from '../thumbnails/windmills.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPlayCircle} from '@fortawesome/free-solid-svg-icons';
-import './css/video.css';
+import './css/video2.css';
 import {Link} from 'react-router-dom';
 
 const Video = (props) => {
