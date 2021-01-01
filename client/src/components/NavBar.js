@@ -1,6 +1,6 @@
 import React, { useState, useContext } from 'react';
 import { Collapse, Navbar, NavbarToggler,
-  NavbarBrand, Nav, NavItem, NavLink, NavbarText, InputGroup, InputGroupAddon, Button, Input
+  NavbarBrand, Nav, NavItem, NavLink, InputGroup, InputGroupAddon, Button, Input
 } from 'reactstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSearch, faCog} from '@fortawesome/free-solid-svg-icons';

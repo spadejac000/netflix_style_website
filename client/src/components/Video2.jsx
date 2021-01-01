@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import {Col, Button, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
+import {Button, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
 import thumbnails from '../thumbnails/windmills.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPlayCircle} from '@fortawesome/free-solid-svg-icons';
